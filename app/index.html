@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FailingToggleTest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/failing-toggle-test.css">
+  </head>
+  <body>
+    <script>
+      window.FailingToggleTestENV = {{ENV}};
+      window.EmberENV = window.FailingToggleTestENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/failing-toggle-test.js"></script>
+    <script>
+      window.FailingToggleTest = require('failing-toggle-test/app')['default'].create(FailingToggleTestENV.APP);
+    </script>
+  </body>
+</html>
