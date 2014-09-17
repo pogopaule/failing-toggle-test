@@ -3,7 +3,7 @@ import { test } from 'ember-qunit';
 import startApp from '../helpers/start-app';
 var App;
 
-module('Acceptance - askname', {
+module('toggle', {
   setup: function() {
     App = startApp();
   },
@@ -24,13 +24,14 @@ test('toggle test 1', function() {
 });
 
 test('toggle test 2', function() {
-  expect(1);
+  expect(2);
 
   visit('/');
   click('.toggleBtn');
 
   andThen(function() {
     equal(find('#toggleState').text(), 'off');
+    equal(find('#blub').text().trim(), 'a');
   });
 });
 

@@ -1,12 +1,11 @@
 import Ember from 'ember';
 
-var ToggleMixin = Ember.Mixin.create({
-  toggle: 'on'
-});
-
-export default Ember.Controller.extend(ToggleMixin, {
+export default Ember.Controller.extend({
+  list: [],
+  toggle: 'on',
   actions: {
     toggle: function() {
+      this.get('list').pushObject('a');
       if(this.get('toggle') === 'on') {
         this.set('toggle', 'off');
       } else {
